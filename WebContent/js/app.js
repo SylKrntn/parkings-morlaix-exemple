@@ -7,7 +7,7 @@
 /**
  * module principal de l'application
  */
-var app = angular.module('app', ['ngRoute', 'ngResource', 'appControllers'/*, 'appServices'*/]);
+var app = angular.module('app', ['ngRoute', 'ngResource', 'appControllers', 'appServices']);
 
 /**
  * routage

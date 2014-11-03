@@ -2,7 +2,17 @@
 	<h1>{{title}}</h1>
 </div>
 
-
+<ul class="sk-listview">
+	<li class="sk-btn" ng-repeat="parking in parkings">
+		<strong>ID : </strong>{{parking.id}}<br />
+		<strong>Nom : </strong>{{parking.name}}<br />
+		<strong>Distance : </strong><span ng-if="parking.distance < 1000">{{parking.distance}} m</span><span ng-if="parking.distance >= 1000">{{parking.distance / 1000}} Km</span><br />
+		<strong>Coordonnées (lat;lng) : </strong>{{parking.latLng[0]}} ; {{parking.latLng[1]}}<br />
+		<strong>Type : </strong>{{parking.status}}<br />
+		<strong>Total places : </strong>{{parking.places_total}}<br />
+		<strong>Places restantes : </strong>{{parking.places_dispo}}<br />
+	</li>
+</ul>
 
 <div class="sk-footer">
 	<button class="sk-btn sk-btn-footer" ng-click="locateUser()">{{locationBtnTxt}}</button>
