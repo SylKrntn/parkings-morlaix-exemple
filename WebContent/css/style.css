@@ -1,0 +1,321 @@
+/**
+ * style.css
+ *
+ * desc: fichier de style de l'application
+ *
+ * author: Sylvain Kérouanton
+ * maj: 03/11/2014
+ */
+
+html, body {
+	padding: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+
+div {
+	padding: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+a {
+	/*text-align: center;*/
+	text-decoration: none;
+	color: black;
+}
+
+h1 {
+	text-align: center;
+	font-family: Comic, sans-serif;
+	font-size: x-large;
+}
+
+/* Classe pour styler les boutons (input, select, a, button)*/
+.sk-btn {
+	/*margin: auto;*/
+	/*z-index: 100;*/
+	display: block;
+	left: 0;
+	right: 0;
+	width: 100%;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	background: #fcfff4; /* anciens navigateurs */
+	background: linear-gradient(to bottom, #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* W3C */ /* gris très clair à gris*/
+	box-shadow: 1px 1px darkgrey;
+	padding: 5px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 5px;
+}
+	.sk-btn-inline { display: inline-block; width: auto; }
+	.sk-btn-input { background: none; }
+	.sk-btn-left-pos { left: 0px; width: auto; }
+	.sk-btn-right-pos { right: 0px; width: auto; }
+	.sk-btn-txt-center { text-align:  center; }
+	a.sk-btn, input.sk-btn, select.sk-btn, button.sk-btn {
+		font-family: Arial, sans-serif;
+		font-size: large;
+	}
+	a.sk-btn:hover, button.sk-btn:hover {
+		background: linear-gradient(to bottom, #717171 0%,#a7a7a7 40%,#b3bead 100%); /* W3C */ /* gris foncé à gris */
+	}
+.sk-btn-group {
+	display: block;
+	width: 100%;
+	left: 0;
+	right: 0;
+	margin-left:0;
+	margin-right: 0;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 0;
+}
+
+/* Classe pour styler une listview */
+ul.sk-listview {
+	padding: 0px;
+	margin: auto;
+}
+	ul.sk-litview li { list-style-type: none; }
+	ul.sk-litview li a { text-align: left; }
+
+/* Classe pour styler le header*/
+.sk-header {
+	/*position: absolute;*/
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 40px;
+	background-color: rgba(0,0,255, 0.6);
+	border-bottom: 2px solid rgb(0,0,255);
+	margin-bottom: 10px;
+	padding: 0;
+	text-align: center;/*ajout*/
+}
+	.sk-header h1 {
+		position: relative;
+		display: inline-block;
+		margin: auto;
+		top: 50%;
+		transform: translate(0%, -50%);
+		color: orange;
+		text-shadow: 0px 2px darkgrey;
+	}
+	.sk-header a {
+		float: left;
+		left: 5px;
+	}
+
+/* Classe pour styler le footer */
+.sk-footer {
+	display: block;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0,0,255, 0.6);
+	border-top: 2px solid rgb(0,0,255);
+	margin-top: 10px;
+}
+
+/* Classe pour styler le contenu d'une vue */
+.sk-content {
+	display: block;
+}
+
+/* Classe pour les messages d'information (une classe principale + une classe de succès et d'erreur*/
+/*.sk-modal {
+	z-index: 9990;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(200,200,200,0.8);
+}*/
+.sk-modal-overlay {
+	z-index: 9991;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(200,200,200,0.8);
+}
+.sk-modal-main {
+	position: absolute;
+	z-index: 9999;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0;
+	/*border-radius: 10px;*/
+	/*border: 4px solid rgb(0,200,0);*/
+	background-color: rgb(240,240,240);
+	box-shadow: 5px 5px 80px black;
+}
+	.sk-modal-header {
+		margin: 0;
+		padding: 5px;
+		background-color: darkgrey;
+		text-align: center;
+	}
+		.sk-modal-title {
+			color: white;
+			display: inline-block;
+			top: 0;
+			left: 0;
+			height: 20%;
+			text-align: center;
+		}
+		.sk-modal-close-btn {
+			display: inline-block;
+			vertical-align: top;
+			float: right;
+			color: white;
+			top: 2px;
+			right: 3px;
+			margin-right: 3px;
+			cursor: pointer;
+			font-size: 150%;
+			font-family: 'arial', 'sans-serif';
+		}
+			.sk-modal-close-btn:hover { color: lightgrey; }
+
+	.sk-modal-body {
+		margin: 10px;
+	}
+.sk-msg {
+	position: absolute;
+	z-index: 10000;
+	border-radius: 10px;
+	width: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 4px 4px 80px black;
+	color: white;
+	text-align: left;
+	padding: 5px;
+}
+	.sk-msg-success {
+		border: 2px solid rgb(0,255,0);
+		background-color: rgba(0,255,0,0.6);
+	}
+	.sk-msg-error {
+		border: 2px solid rgb(200,0,0);
+		background-color: rgba(255,0,0,0.8);
+	}
+
+
+/* =============== *\
+|*      POPUP      *|
+\* =============== */
+.sk-modal-overlay {
+	position: absolute;
+	z-index: 9999;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.8);
+}
+
+.sk-modal-dialog {
+	position: absolute;
+	z-index: 10000;
+	width: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	box-shadow: 4px 4px 80px black;
+}
+	.sk-modal-dialog-content {
+		padding: 10px;
+		text-align: left;
+	}
+
+.sk-modal-close {
+	display: inline-block;
+	position: absolute;
+	top: 3px;
+	right: 5px;
+	padding: 5px;
+	cursor: pointer;
+	color: white;
+	font-size: 120%;
+	font-weight: bold;
+	font-family: 'arial', 'sans-serif';
+	&:hover {
+		color: darken(white, 50%);
+	}
+}
+
+
+/* ====================== *\
+|*      CARTOGRAPHIE      *|
+\* ====================== */
+/* Conteneur de la carte */
+#map {
+	width: 640px;
+	height: 480px;
+	border: 1px solid darkgrey;
+}
+/* popup d'informations des marqueurs sur la carte */
+.ol-popup {
+	display: none;
+	position: absolute;
+	min-width: 300px;
+	max-width: 400px;
+	background-color: white;
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+	-webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+	filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+	padding: 15px;
+	border-radius: 10px;
+	border: 1px solid #cccccc;
+	bottom: 12px;
+	left: -50px;
+}
+.ol-popup:after, .ol-popup:before {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.ol-popup:after {
+	border-top-color: white;
+	border-width: 10px;
+	left: 48px;
+	margin-left: -10px;
+}
+.ol-popup:before {
+	border-top-color: #cccccc;
+	border-width: 11px;
+	left: 48px;
+	margin-left: -11px;
+}
+.ol-popup-closer {
+	text-decoration: none;
+	position: absolute;
+	top: 2px;
+	right: 8px;
+}
+.ol-popup-closer:after {
+	content: "✖";
+}
+#popup-content {
+	font-size: small;
+}
