@@ -83,6 +83,8 @@ appControllers.controller('ListviewCtrl', ['$scope', 'geolocalisation', 'serverD
 					});
 			});
 	};
+	
+	$scope.locateUser();
 }]);
 
 

@@ -123,13 +123,13 @@ appServices.factory('geolocalisation', ['$window', '$rootScope', '$q', function(
 
 
 /**
- * Service d'accès aux données du serveur
+ * Service d'accès aux données du serveur (pour ce projet, les données se trouvent dans un répertoire local)
  */
 appServices.factory('serverDAO', ['$http', '$q', function($http, $q) {
 	var sortedParkings = [];
 	
 	/**
-	 * calcule la distance, en ligne droite, entre 2 points
+	 * calcule la distance, en ligne droite, entre 2 points (selon la formule de Haversine)
 	 * @return la distance, en mètre
 	 */
 	var distanceBetween = function(userCoords, parkingCoords) {
